@@ -8,6 +8,14 @@ const nextConfig = {
   experimental: {
     serverActions: { bodySizeLimit: '50mb' },
     serverComponentsExternalPackages: ['@prisma/client', 'prisma']
+  },
+  webpack: (config, { nextRuntime, webpack }) => {
+    if (nextRuntime === 'edge') {
+      config.plugins.push(
+        new webpack.DefinePlugin({ __dirname: JSON.stringify('/') })
+      );
+    }
+    return config;
   }
 };
 module.exports = nextConfig;
