@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --halo-cream: #fffff4;
+  --halo-teal: #013b4a;
+  --halo-black: #010101;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+/* Tap-friendly check on mobile */
+input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; }
+
+/* iOS safe area for bottom nav */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Prevent content jumping on iOS when keyboard appears */
+@supports (-webkit-overflow-scrolling: touch) {
+  body { -webkit-overflow-scrolling: touch; }
+}

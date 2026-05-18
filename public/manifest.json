@@ -1,0 +1,36 @@
+{
+  "name": "Halo Dashboard",
+  "short_name": "Halo",
+  "description": "Content flywheel dashboard for @thehalo.au",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffff4",
+  "theme_color": "#013b4a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "This week",
+      "url": "/",
+      "description": "View this week's content plan"
+    },
+    {
+      "name": "Idea Dump",
+      "url": "/ideas",
+      "description": "Dump a new content idea"
+    }
+  ]
+}
