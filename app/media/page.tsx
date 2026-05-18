@@ -114,7 +114,7 @@ export default function MediaPage() {
         {filtered.length === 0 && <p className="text-sm text-black/50">No assets yet.</p>}
       </div>
 
-      {activeReview && <ReviewModal review={activeReview.review} asset={activeReview.asset} onClose={() => setActiveReview(null)} onApprove={(id) => { updateStatus(id, 'approved'); setActiveReview(null); }} />}
+      {activeReview && <ReviewModal review={activeReview.review} asset={activeReview.asset} onClose={() => setActiveReview(null)} onApprove={(id: string) => { updateStatus(id, 'approved'); setActiveReview(null); }} />}
     </div>
   );
 }
