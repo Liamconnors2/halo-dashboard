@@ -58,7 +58,7 @@ export async function analyzeContent(input: ContentReviewInput): Promise<Content
     content: []
   };
 
-  const content = userMessage.content as Anthropic.ContentBlockParam[];
+  const content = userMessage.content as Array<Anthropic.TextBlockParam | Anthropic.ImageBlockParam>;
 
   if (input.imageBase64 && input.imageMimeType) {
     content.push({
